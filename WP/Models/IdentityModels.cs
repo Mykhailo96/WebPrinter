@@ -38,7 +38,5 @@ namespace WP.Models
         }
 
         public System.Data.Entity.DbSet<WP.Models.Purchase> Purchases { get; set; }
-
-        public System.Data.Entity.DbSet<WP.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }

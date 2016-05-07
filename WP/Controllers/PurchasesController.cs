@@ -39,7 +39,7 @@ namespace WP.Controllers
         // GET: Purchases/Create
         public ActionResult Create()
         {
-            ViewBag.ApplicationUserID = new SelectList(db.ApplicationUsers, "Id", "FirstName");
+            ViewBag.ApplicationUserID = new SelectList(db.Users, "Id", "FirstName");
             return View();
         }
 
@@ -48,8 +48,13 @@ namespace WP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Price,ObjectPrecision,ObjecttColor,ObjectMaterial,OrderStatus,OrderNumber,Address,FileName,ApplicationUserID")] Purchase purchase)
+        public ActionResult Create([Bind(Include = "ObjectPrecision,ObjecttColor,ObjectMaterial,Address,FileName")] Purchase purchase)
         {
+            purchase.OrderStatus = Status.Pending;
+
+            Random rand = new Random();
+            purchase.OrderNumber = rand.Next(100000, 99999999);
+
             if (ModelState.IsValid)
             {
                 db.Purchases.Add(purchase);
@@ -57,7 +62,7 @@ namespace WP.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ApplicationUserID = new SelectList(db.ApplicationUsers, "Id", "FirstName", purchase.ApplicationUserID);
+            ViewBag.ApplicationUserID = new SelectList(db.Users, "Id", "FirstName", purchase.ApplicationUserID);
             return View(purchase);
         }
 
@@ -73,7 +78,7 @@ namespace WP.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ApplicationUserID = new SelectList(db.ApplicationUsers, "Id", "FirstName", purchase.ApplicationUserID);
+            ViewBag.ApplicationUserID = new SelectList(db.Users , "Id", "FirstName", purchase.ApplicationUserID);
             return View(purchase);
         }
 
@@ -90,7 +95,7 @@ namespace WP.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ApplicationUserID = new SelectList(db.ApplicationUsers, "Id", "FirstName", purchase.ApplicationUserID);
+            ViewBag.ApplicationUserID = new SelectList(db.Users, "Id", "FirstName", purchase.ApplicationUserID);
             return View(purchase);
         }
 
