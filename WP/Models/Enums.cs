@@ -27,4 +27,14 @@ namespace WP.Models
         ABS,
         PLA
     }
+
+    public enum Status
+    {
+        Pending,
+        Confirmed,
+        In_progress,
+        Printed,
+        Shipped,
+        Delivered
+    }
 }
