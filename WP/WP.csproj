@@ -185,12 +185,17 @@
     <Compile Include="Migrations\201605071542482_Purchase.Designer.cs">
       <DependentUpon>201605071542482_Purchase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605071652366_Purchase2.cs" />
+    <Compile Include="Migrations\201605071652366_Purchase2.Designer.cs">
+      <DependentUpon>201605071652366_Purchase2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Enums.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Purchase.cs" />
+    <Compile Include="Models\RolesInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -269,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605071542482_Purchase.resx">
       <DependentUpon>201605071542482_Purchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605071652366_Purchase2.resx">
+      <DependentUpon>201605071652366_Purchase2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

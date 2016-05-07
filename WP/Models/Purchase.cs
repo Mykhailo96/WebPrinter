@@ -13,6 +13,8 @@ namespace WP.Models
         public Color ObjecttColor { get; set; }
         public Material ObjectMaterial { get; set; }
         public Status OrderStatus { get; set; }
+        public int OrderNumber { get; set; }
+        public string Address { get; set; }
 
         public string FileName { get; set; }
 
