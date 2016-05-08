@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -39,20 +40,19 @@ namespace WP.Controllers
         // GET: Purchases/Create
         public ActionResult Create()
         {
-            //ViewBag.ApplicationUserID = new SelectList(db.Users, "Id", "ApplicationUserID");
+            ViewBag.ApplicationUserID = new SelectList(db.Users, "Id", "ApplicationUserID");
             return View();
         }
 
         // POST: Purchases/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ObjectPrecision,ObjecttColor,ObjectMaterial,Address,FileName, ApplicationUserID")] Purchase purchase)
+        public ActionResult Create([Bind(Include = "ObjectPrecision,ObjecttColor,ObjectMaterial,Address,FileName")] Purchase purchase)
         {
             purchase.OrderStatus = Status.Pending;
-            purchase.ApplicationUserID = ViewBag.CurrentUserId;
+            purchase.ApplicationUserID = User.Identity.GetUserId();
 
-            ApplicationUser user = db.Users.Find(purchase.ApplicationUserID);
-            user.Purchases.Add(purchase);
+
 
             Random rand = new Random();
             purchase.OrderNumber = rand.Next(100000, 99999999);
@@ -64,7 +64,7 @@ namespace WP.Controllers
                 return RedirectToAction("Index");
             }
 
-            //ViewBag.ApplicationUserID = new SelectList(db.Users, "Id", "ApplicationUserID", purchase.ApplicationUserID);
+            ViewBag.ApplicationUserID = new SelectList(db.Users, "Id", "ApplicationUserID", purchase.ApplicationUserID);
             return View(purchase);
         }
 
