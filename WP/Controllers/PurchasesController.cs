@@ -39,18 +39,20 @@ namespace WP.Controllers
         // GET: Purchases/Create
         public ActionResult Create()
         {
-            ViewBag.ApplicationUserID = new SelectList(db.Users, "Id", "FirstName");
+            //ViewBag.ApplicationUserID = new SelectList(db.Users, "Id", "ApplicationUserID");
             return View();
         }
 
         // POST: Purchases/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ObjectPrecision,ObjecttColor,ObjectMaterial,Address,FileName")] Purchase purchase)
+        public ActionResult Create([Bind(Include = "ObjectPrecision,ObjecttColor,ObjectMaterial,Address,FileName, ApplicationUserID")] Purchase purchase)
         {
             purchase.OrderStatus = Status.Pending;
+            purchase.ApplicationUserID = ViewBag.CurrentUserId;
+
+            ApplicationUser user = db.Users.Find(purchase.ApplicationUserID);
+            user.Purchases.Add(purchase);
 
             Random rand = new Random();
             purchase.OrderNumber = rand.Next(100000, 99999999);
@@ -62,7 +64,7 @@ namespace WP.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ApplicationUserID = new SelectList(db.Users, "Id", "FirstName", purchase.ApplicationUserID);
+            //ViewBag.ApplicationUserID = new SelectList(db.Users, "Id", "ApplicationUserID", purchase.ApplicationUserID);
             return View(purchase);
         }
 

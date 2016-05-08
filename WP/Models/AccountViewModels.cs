@@ -76,10 +76,6 @@ namespace WP.Models
         public string LastName { get; set; }
 
         [Required]
-        [Display(Name = "Address")]
-        public string Address { get; set; }
-
-        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
