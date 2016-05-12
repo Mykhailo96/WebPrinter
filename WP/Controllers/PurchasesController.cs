@@ -19,6 +19,11 @@ namespace WP.Controllers
         [Authorize]
         public ActionResult Index()
         {
+            if(User.Identity.Name == "Admin")
+            {
+                var allPurchase = db.Purchases;
+                return View(allPurchase.ToList());
+            }
             var purchases = from p in db.Purchases where p.ApplicationUser.UserName == User.Identity.Name select p;
             return View(purchases.ToList());
         }
@@ -70,6 +75,7 @@ namespace WP.Controllers
         }
 
         // GET: Purchases/Edit/5
+        [Authorize(Roles = "admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -103,6 +109,7 @@ namespace WP.Controllers
         }
 
         // GET: Purchases/Delete/5
+        [Authorize(Roles = "admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
