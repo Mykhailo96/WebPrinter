@@ -52,8 +52,6 @@ namespace WP.Controllers
             purchase.OrderStatus = Status.Pending;
             purchase.ApplicationUserID = User.Identity.GetUserId();
 
-
-
             Random rand = new Random();
             purchase.OrderNumber = rand.Next(100000, 99999999);
 
