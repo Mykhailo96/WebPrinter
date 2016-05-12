@@ -16,13 +16,15 @@ namespace WP.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Purchases
+        [Authorize]
         public ActionResult Index()
         {
-            var purchases = db.Purchases.Include(p => p.ApplicationUser);
+            var purchases = from p in db.Purchases where p.ApplicationUser.UserName == User.Identity.Name select p;
             return View(purchases.ToList());
         }
 
         // GET: Purchases/Details/5
+        [Authorize]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -38,6 +40,7 @@ namespace WP.Controllers
         }
 
         // GET: Purchases/Create
+        [Authorize(Roles = "user")]
         public ActionResult Create()
         {
             ViewBag.ApplicationUserID = new SelectList(db.Users, "Id", "ApplicationUserID");
