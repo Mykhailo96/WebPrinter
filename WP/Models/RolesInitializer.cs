@@ -19,7 +19,7 @@ namespace WP.Models
             roleManager.Create(new IdentityRole("admin"));
             roleManager.Create(new IdentityRole("user"));
 
-            var admin = new ApplicationUser { Email = "WebPrinter@gmail.com", UserName = "Admin" };
+            var admin = new ApplicationUser { Email = "WebPrinter@gmail.com", UserName = "Admin", EmailConfirmed = true };
             string password = "Admin12.";
             var result = userManager.Create(admin, password);
 

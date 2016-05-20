@@ -11,6 +11,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using WP.Models;
+using System.Net.Mail;
 
 namespace WP
 {
@@ -18,8 +19,23 @@ namespace WP
     {
         public Task SendAsync(IdentityMessage message)
         {
-            // Plug in your email service here to send an email.
-            return Task.FromResult(0);
+            var login = "WebPrinter3D@gmail.com";
+            var password = "WebPrinter123";
+
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.UseDefaultCredentials = false;
+            client.Credentials = new System.Net.NetworkCredential(login, password);
+            client.EnableSsl = true;
+
+            var mail = new MailMessage(login, message.Destination);
+            mail.Subject = message.Subject;
+            mail.Body = message.Body;
+            mail.IsBodyHtml = true;
+
+            return client.SendMailAsync(mail);
+            //return Task.FromResult(0);
         }
     }
 
@@ -37,7 +53,7 @@ namespace WP
             // Configure validation logic for usernames
             manager.UserValidator = new UserValidator<ApplicationUser>(manager)
             {
-                AllowOnlyAlphanumericUserNames = false,
+                AllowOnlyAlphanumericUserNames = true,
                 RequireUniqueEmail = true
             };
 
