@@ -1,44 +1,170 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<!doctype html>
+<html class="no-js">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Web Printer</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewBag.Title</title>
 
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/img/favicon/favicon.ico" />
+    <meta name="theme-color" content="#ffffff">
+
+    @Styles.Render("~/Content/css/bootstrap.min.css")
+    @Styles.Render("~/Content/css/normalize.min.css")
+    @Styles.Render("~/Content/css/animate.min.css")
+    @Styles.Render("~/Content/css/flickity.min.css")
+    @Styles.Render("~/Content/css/styles.css")
+    @Styles.Render("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
 </head>
+
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Web Printer", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Print", "Create", "Purchases")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="header-nav-wrapper">
+                <div class="logo">
+                    <a href="/"><img src="~/Content/img/logo220x44.png" alt="Web Printer"></a>
+                </div>
+                <div class="primary-nav-wrapper">
+                    <nav>
+                        <ul class="primary-nav">
+                            <li><a href="#intro">The collective</a></li>
+                            <li><a href="#team">The crew</a></li>
+                            <li><a href="#articles">Articles</a></li>
+                            <li><a href="#freebies">Freebies</a></li>
+                        </ul>
+                    </nav>
+                    <div class="secondary-nav-wrapper">
+                        <ul class="secondary-nav">
+                            <li class="subscribe"><a href="#get-started">Subscribe</a></li>
+                            <li class="search"><a href="#search" class="show-search"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="search-wrapper">
+                        <ul class="search">
+                            <li>
+                                <input type="text" id="search-input" placeholder="Start typing then hit enter to search">
+                            </li>
+                            <li>
+                                <a href="#" class="hide-search"><i class="fa fa-close"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navicon">
+                    <a class="nav-toggle" href="#"><span></span></a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Web Printer</p>
-        </footer>
-    </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <header class="hero">
+        <div class="carousel js-flickity">
+            <div class="carousel-cell" style="background-image: url(/Content/img/slide1.jpg);">
+                <div class="hero-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <h1 class="wp1">Тут щось та й буде Tyt</h1>
+                                <a href="#intro" class="btn primary wp2">Learn more</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 hero-intro-text wp3">
+                                <p>Synthetica is a <span class="bold italic">FREE</span>, HTML5/CSS3 template by Peter Finlan, available for download exclusively via Codrops. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell" style="background-image: url(img/hero-bg-02.jpg);">
+                <div class="hero-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <h1 class="wp1">Get a head start, with the Synthetica Sketch file.</h1>
+                                <a href="http://tympanus.net/codrops/?p=26570" class="btn primary wp2">Download Sketch File</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 hero-intro-text wp3">
+                                <p>Create your landing page in minutes with Synthetica's Sketch style guide.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell" style="background-image: url(img/hero-bg-03.jpg);">
+                <div class="hero-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <h1 class="wp1">Download Synthetica today, it's free forever.</h1>
+                                <a href="http://tympanus.net/codrops/?p=26570" class="btn primary wp2">Download Template</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 hero-intro-text wp3">
+                                <p>Available exclusively from Codrops.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='mouse-container'>
+            <a href="#intro">
+                <div class='mouse'>
+                    <span class='scroll-down'></span>
+                </div>
+            </a>
+        </div>
+    </header>
+    @RenderBody()
+    <footer class="has-padding footer-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-branding">
+                    <img class="footer-branding-logo" src="img/synthetica-logo.png" alt="Synthetica freebie html5 css3 template peter finlan logo">
+                    <p>A free HTML5/CSS3 template by <a href="http://www.peterfinlan.com">Peter Finlan</a>, exclusively for <span class="bold-italic">Codrops</span></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 footer-nav">
+                    <ul class="footer-primary-nav">
+                        <li><a href="#intro">The Collective</a></li>
+                        <li><a href="#team">The Crew</a></li>
+                        <li><a href="#articles">Articles</a></li>
+                        <li><a href="#freebies">Freebies</a></li>
+                        <li><a href="#">Subscribe</a></li>
+                    </ul>
+                    <ul class="footer-share">
+                        <li><a href="http://tympanus.net/codrops/licensing/">Licence</a></li>
+                        <li><a href="#" class="share-trigger"><i class="fa fa-share"></i>Share</a></li>
+                    </ul>
+                    <div class="share-dropdown">
+                        <ul>
+                            <li><a href="#" class="share-twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="share-facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" class="share-linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <ul class="footer-secondary-nav">
+                        <li>&copy; @DateTime.Now.Year – Web Printer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    @Scripts.Render("~/Scripts/jquery-1.11.2.min.js")
+    @Scripts.Render("http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js")
+    @Scripts.Render("~/Scripts/bootstrap.min.js")
+    @Scripts.Render("~/Scripts/modernizr-2.8.3-respond-1.4.2.min.js")
+    @Scripts.Render("~/Scripts/retina.min.js")
+    @Scripts.Render("~/Scripts/jquery.waypoints.min.js")
+    @Scripts.Render("~/Scripts/flickity.pkgd.min.js")
+    @Scripts.Render("~/Scripts/scripts-min.js")
 </body>
+
 </html>
