@@ -76,7 +76,7 @@ p {
   font-size: 15px;
   line-height: 27px;
   padding-bottom: 15px;
-  color: #414A52;
+  color: #1F323C;
 }
 
 /* line 42, scss/partials/_typography.scss */
@@ -115,7 +115,7 @@ h4:after {
   height: 2px;
   margin-top: 15px;
   content: '';
-  background-color: #7AE2DE;
+  background-color: #7FADC0;
 }
 
 /* line 85, scss/partials/_typography.scss */
@@ -124,7 +124,7 @@ h5 {
   font-weight: 600;
   display: inline-block;
   text-transform: uppercase;
-  color: #414A52;
+  color: #1F323C;
 }
 
 /* line 96, scss/partials/_typography.scss */
@@ -143,14 +143,14 @@ Button styles
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #ffffff;
-  background-color: #7AE2DE;
+  background-color: #7FADC0;
   padding: 20px;
   text-decoration: none;
   line-height: 1;
 }
 /* line 17, scss/partials/_buttons.scss */
 .btn.primary:hover {
-  background-color: #71D5D2;
+  background-color: #7FADC0;
 }
 
 /* line 21, scss/partials/_buttons.scss */
@@ -159,8 +159,8 @@ Button styles
   font-size: 13px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #7AE2DE;
-  border: 2px solid #7AE2DE;
+  color: #7FADC0;
+  border: 2px solid #7FADC0;
   padding: 15px 20px;
   text-decoration: none;
   line-height: 1;
@@ -169,14 +169,14 @@ Button styles
 /* line 32, scss/partials/_buttons.scss */
 .btn.secondary:hover {
   color: #ffffff;
-  background-color: #71D5D2;
-  border-color: #71D5D2;
+  background-color: #7FADC0;
+  border-color: #7FADC0;
 }
 /* line 37, scss/partials/_buttons.scss */
 .btn.secondary:focus {
   color: #ffffff;
-  background-color: #7AE2DE;
-  border-color: #7AE2DE;
+  background-color: #7FADC0;
+  border-color: #7FADC0;
 }
 
 /* line 43, scss/partials/_buttons.scss */
@@ -194,13 +194,13 @@ Button styles
 }
 /* line 54, scss/partials/_buttons.scss */
 .btn.secondary-white:hover {
-  color: #7AE2DE;
+  color: #7FADC0;
   background-color: #ffffff;
   border-color: #ffffff;
 }
 /* line 59, scss/partials/_buttons.scss */
 .btn.secondary-white:focus {
-  color: #7AE2DE;
+  color: #7FADC0;
   background-color: #ffffff;
   border-color: #ffffff;
 }
@@ -261,7 +261,7 @@ a.text-link:hover:after {
 
 /* line 14, scss/partials/_layout.scss */
 .footer-bg {
-  background-color: #414A52;
+  background-color: #1F323C;
 }
 
 /* line 17, scss/partials/_layout.scss */
@@ -363,7 +363,7 @@ a.text-link:hover:after {
 
 @font-face {
   font-family: VideoJS;
-  src: url(../font/1.4.0/VideoJS.eot?#iefix) format("eot");
+  src: url(font/1.4.0/VideoJS.eot?#iefix) format("eot");
 }
 @font-face {
   font-family: VideoJS;
@@ -1288,7 +1288,7 @@ body.vjs-full-window {
 
 /* line 2, scss/partials/_video_skin.scss */
 .video-js .vjs-play-progress {
-  background-color: rgba(122, 226, 222, 0.75);
+  background-color: rgba(127, 173, 192, 0.75);
 }
 
 /* line 2, scss/partials/_video_skin.scss */
@@ -2066,7 +2066,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  color: #414A52;
+  color: #1F323C;
   -webkit-text-size-adjust: 100%;
   /*fix for iOS*/
 }
@@ -2094,13 +2094,13 @@ a {
   transition-timing-function: ease;
   -webkit-transition-duration: 200ms;
   transition-duration: 200ms;
-  color: #7AE2DE;
+  color: #7FADC0;
 }
 
 /* line 60, scss/styles.scss */
 a:hover {
   text-decoration: none;
-  color: #71D5D2;
+  color: #7FADC0;
 }
 
 /* line 66, scss/styles.scss */
@@ -2249,7 +2249,7 @@ Main Nav
 /* line 199, scss/styles.scss */
 .header-nav-wrapper {
   position: relative;
-  background-color: #ffffff;
+  background-color: #E5E7E9;
 }
 /* line 204, scss/styles.scss */
 .header-nav-wrapper .logo {
@@ -2257,8 +2257,8 @@ Main Nav
   width: 340px;
   padding: 30px 0;
   text-align: center;
-  border-bottom: solid 5px #7AE2DE;
-  background-color: #414A52;
+  border-bottom: solid 5px #7FADC0;
+  background-color: #1F323C;
 }
 /* line 216, scss/styles.scss */
 .header-nav-wrapper .primary-nav-wrapper {
@@ -2295,11 +2295,11 @@ Main Nav
   position: relative;
   padding-bottom: 10px;
   text-decoration: none;
-  color: #414A52;
+  color: #1F323C;
 }
 /* line 260, scss/styles.scss */
 .header-nav-wrapper nav ul li a:hover {
-  color: #7AE2DE;
+  color: #7FADC0;
 }
 /* line 264, scss/styles.scss */
 .header-nav-wrapper nav ul li a:before {
@@ -2314,7 +2314,7 @@ Main Nav
   transition: all .3s ease-in-out 0s;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
-  background-color: #7AE2DE;
+  background-color: #7FADC0;
 }
 /* line 283, scss/styles.scss */
 .header-nav-wrapper nav ul li a:hover:before {
@@ -2332,7 +2332,7 @@ Main Nav
 .secondary-nav-wrapper {
   display: inline-block;
   padding: 35px 30px;
-  background-color: #414A52;
+  background-color: #1F323C;
 }
 /* line 309, scss/styles.scss */
 .secondary-nav-wrapper ul.secondary-nav li {
@@ -2365,7 +2365,7 @@ Main Nav
   transition: all .3s ease-in-out 0s;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
-  background-color: #7AE2DE;
+  background-color: #7FADC0;
 }
 /* line 348, scss/styles.scss */
 .secondary-nav-wrapper ul.secondary-nav li.subscribe a:hover:before {
@@ -2413,7 +2413,7 @@ Main Nav
   -webkit-transition: all 300ms;
   transition: all 300ms;
   opacity: 0;
-  background-color: #414A52;
+  background-color: #1F323C;
 }
 /* line 408, scss/styles.scss */
 .search-wrapper ul.search .is-selected {
@@ -2440,8 +2440,8 @@ Main Nav
   transition: all 300ms;
   color: #ffffff;
   border: none;
-  border-bottom: solid 2px #7AE2DE;
-  background-color: #414A52;
+  border-bottom: solid 2px #7FADC0;
+  background-color: #1F323C;
 }
 
 /* line 443, scss/styles.scss */
@@ -2534,7 +2534,7 @@ Main Nav
   padding: 52px;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
-  background-color: #414A52;
+  background-color: #1F323C;
 }
 
 /* line 536, scss/styles.scss */
@@ -2664,7 +2664,7 @@ Stats
 ========================================================================== */
 /* line 691, scss/styles.scss */
 .stats {
-  background: url("../img/stats-bg.jpg") no-repeat center center;
+  background: url("img/stats-bg.jpg") no-repeat center center;
   background-size: cover;
 }
 /* line 695, scss/styles.scss */
@@ -2794,7 +2794,7 @@ Crew
   -webkit-transition: all 300ms;
   transition: all 300ms;
   opacity: 0;
-  background-color: rgba(122, 226, 222, 0.8);
+  background-color: rgba(127, 173, 192, 0.8);
 }
 
 /* line 852, scss/styles.scss */
@@ -2808,13 +2808,13 @@ Crew
 }
 /* line 861, scss/styles.scss */
 .skillset .bar-wrapper {
-  background-color: #414A52;
+  background-color: #1F323C;
 }
 /* line 864, scss/styles.scss */
 .skillset .bar-wrapper .bar {
   height: 10px;
   margin: 10px 0;
-  background-color: #7AE2DE;
+  background-color: #7FADC0;
 }
 /* line 872, scss/styles.scss */
 .skillset .bar-chart-figure {
@@ -2843,7 +2843,7 @@ Latest articles
   left: 10px;
   padding: 4px 10px;
   color: #ffffff;
-  background-color: #7AE2DE;
+  background-color: #7FADC0;
   -moz-border-radius: 40px;
   -webkit-border-radius: 40px;
   border-radius: 40px;
@@ -2859,7 +2859,7 @@ Latest articles
 }
 /* line 922, scss/styles.scss */
 .latest-articles article:hover .has-overlay:after {
-  background-color: rgba(65, 74, 82, 0.8);
+  background-color: rgba(31, 50, 60, 0.8);
 }
 /* line 927, scss/styles.scss */
 .latest-articles article ul.article-footer {
@@ -2888,7 +2888,7 @@ Latest articles
   font-weight: 500;
   line-height: 30px;
   padding: 15px 10px 10px 0;
-  color: #414A52;
+  color: #1F323C;
 }
 /* line 963, scss/styles.scss */
 .latest-articles figcaption h2:after {
@@ -2926,7 +2926,7 @@ Latest articles
   content: '';
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
-  background-color: rgba(65, 74, 82, 0.6);
+  background-color: rgba(31, 50, 60, 0.6);
 }
 /* line 1012, scss/styles.scss */
 .latest-articles select#inputArticle-Sort {
@@ -2938,10 +2938,10 @@ Latest articles
   transition: all 300ms;
   text-indent: .01px;
   text-overflow: '';
-  color: rgba(65, 74, 82, 0.5);
+  color: rgba(31, 50, 60, 0.5);
   border: none;
-  border-bottom: solid 2px #7AE2DE;
-  background: url("../img/dd-arrow.png") no-repeat;
+  border-bottom: solid 2px #7FADC0;
+  background: url("img/dd-arrow.png") no-repeat;
   background-color: none;
   background-position: 280px 5px;
   -moz-border-radius: 0;
@@ -2967,7 +2967,7 @@ Freebies
   width: 100%;
   height: 100%;
   content: '';
-  background-color: rgba(65, 74, 82, 0.5);
+  background-color: rgba(31, 50, 60, 0.5);
 }
 /* line 1060, scss/styles.scss */
 .freebies .content-left {
@@ -3016,7 +3016,7 @@ Freebies
   -webkit-transition: opacity 300ms;
   transition: opacity 300ms;
   opacity: 0;
-  background-color: rgba(65, 74, 82, 0.7);
+  background-color: rgba(31, 50, 60, 0.7);
 }
 /* line 1121, scss/styles.scss */
 .freebies .freebies-intro {
@@ -3085,8 +3085,8 @@ Get started
 section.get-started {
   position: relative;
   padding: 90px 0;
-  background-image: -webkit-linear-gradient(225deg, #70f6ea 0%, #51ccdc 100%);
-  background-image: linear-gradient(225deg, #70f6ea 0%, #51ccdc 100%);
+  background-image: -webkit-linear-gradient(225deg, #7DABBE 0%, #4A7889 100%);
+  background-image: linear-gradient(225deg, #7dabbe 0%, #4a7889 100%);
 }
 /* line 1209, scss/styles.scss */
 section.get-started h2 {
@@ -3117,7 +3117,7 @@ section.get-started:before {
   width: 100%;
   height: 100%;
   content: ' ';
-  background-image: url("../img/texture-shapes-bg.png");
+  background-image: url("img/texture-shapes-bg.png");
 }
 
 /* ==========================================================================
@@ -3143,7 +3143,7 @@ footer ul li a {
 }
 /* line 1276, scss/styles.scss */
 footer ul li a:hover {
-  color: #7AE2DE;
+  color: #7FADC0;
 }
 /* line 1283, scss/styles.scss */
 footer .footer-branding {
@@ -3268,7 +3268,7 @@ Stroke Gap Icons
 ========================================================================== */
 @font-face {
   font-family: 'Stroke-Gap-Icons';
-  src: url("../css/fonts/Stroke-Gap-Icons.eot");
+  src: url("fonts/Stroke-Gap-Icons.eot");
 }
 @font-face {
   font-family: 'Stroke-Gap-Icons';
@@ -4315,7 +4315,7 @@ Responsive Media Queries
     width: 100%;
     height: 100%;
     opacity: 0;
-    background-color: #414A52;
+    background-color: #1F323C;
   }
 
   /* line 2289, scss/styles.scss */
@@ -4387,7 +4387,7 @@ Responsive Media Queries
 
   /* line 2356, scss/styles.scss */
   .secondary-nav-wrapper ul li.subscribe a:hover {
-    color: #7AE2DE;
+    color: #7FADC0;
   }
 
   /* line 2360, scss/styles.scss */
@@ -4641,7 +4641,7 @@ Responsive Media Queries
   /* line 2595, scss/styles.scss */
   .header-nav-wrapper {
     border-bottom: solid 5px #7ae2de;
-    background-color: #414A52;
+    background-color: #1F323C;
   }
 
   /* line 2600, scss/styles.scss */

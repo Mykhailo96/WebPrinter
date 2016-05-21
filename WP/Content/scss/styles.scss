@@ -200,7 +200,7 @@ Main Nav
 {
     position: relative;
 
-    background-color: $white;
+    background-color: $porcelain;
     .logo
     {
         display: inline-block;
@@ -690,7 +690,7 @@ Stats
 ========================================================================== */
 .stats
 {
-    background: url('../img/stats-bg.jpg') no-repeat center center;
+    background: url('img/stats-bg.jpg') no-repeat center center;
     background-size: cover;
     i.icon
     {
@@ -1025,7 +1025,7 @@ Latest articles
         color: rgba($slate, .5);
         border: none;
         border-bottom: solid 2px $teal;
-        background: url('../img/dd-arrow.png') no-repeat;
+        background: url('img/dd-arrow.png') no-repeat;
         background-color: none;
         background-position: 280px 5px;
 
@@ -1204,8 +1204,8 @@ section.get-started
 
     padding: 90px 0;
 
-    background-image: -webkit-linear-gradient(225deg, #70f6ea 0%, #51ccdc 100%);
-    background-image:         linear-gradient(225deg, #70f6ea 0%, #51ccdc 100%);
+    background-image: -webkit-linear-gradient(225deg, #7DABBE 0%, #4A7889 100%);
+    background-image:         linear-gradient(225deg, #7DABBE 0%, #4A7889 100%);
     h2
     {
         font-size: 28px;
@@ -1245,7 +1245,7 @@ section.get-started
 
         content: ' ';
 
-        background-image: url('../img/texture-shapes-bg.png');
+        background-image: url('img/texture-shapes-bg.png');
     }
 }
 /* ==========================================================================
@@ -1430,7 +1430,7 @@ Stroke Gap Icons
 {
     font-family: 'Stroke-Gap-Icons';
 
-    src: url('../css/fonts/Stroke-Gap-Icons.eot');
+    src: url('fonts/Stroke-Gap-Icons.eot');
 }
 @font-face
 {
