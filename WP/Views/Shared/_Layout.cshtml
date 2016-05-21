@@ -9,6 +9,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="~/Content/img/favicon/favicon.ico" />
     <meta name="theme-color" content="#ffffff">
 
+    @RenderSection("scripts", required: false)
     @Styles.Render("~/Content/css/bootstrap.min.css")
     @Styles.Render("~/Content/css/normalize.min.css")
     @Styles.Render("~/Content/css/animate.min.css")
@@ -59,73 +60,6 @@
             </div>
         </div>
     </div>
-    <header class="hero">
-        <div class="carousel js-flickity flickity-enabled is-draggable" tabindex="0">
-            <div class="flickity-viewport" style="height: 344px;">
-                <div class="flickity-slider" style="left: 0px; transform: translateX(-201.43%);">
-                    <div class="carousel-cell" style="position: absolute; left: 0%; background-image: url(Content/img/hero-bg-01.jpg);">
-                        <div class="hero-bg">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12 text-center">
-                                        <h1 class="wp1 animated fadeInUp">Introducing, Synthetica. A blissful HTML5/CSS3 Template, free forever.</h1>
-                                        <a href="#intro" class="btn primary wp2 animated fadeInUp">Learn more</a>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-8 col-md-offset-2 hero-intro-text wp3 animated fadeInUp">
-                                        <p>Synthetica is a <span class="bold italic">FREE</span>, HTML5/CSS3 template by Peter Finlan, available for download exclusively via Codrops. </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="carousel-cell" style="position: absolute; left: 100.71%; background-image: url(Content/img/hero-bg-02.jpg);">
-                        <div class="hero-bg">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12 text-center">
-                                        <h1 class="wp1 animated fadeInUp">Get a head start, with the Synthetica Sketch file.</h1>
-                                        <a href="http://tympanus.net/codrops/?p=26570" class="btn primary wp2 animated fadeInUp">Download Sketch File</a>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-8 col-md-offset-2 hero-intro-text wp3 animated fadeInUp">
-                                        <p>Create your landing page in minutes with Synthetica's Sketch style guide.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="carousel-cell is-selected" style="position: absolute; left: 201.43%; background-image: url(Content/img/hero-bg-03.jpg);">
-                        <div class="hero-bg">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12 text-center">
-                                        <h1 class="wp1 animated fadeInUp">Download Synthetica today, it's free forever.</h1>
-                                        <a href="http://tympanus.net/codrops/?p=26570" class="btn primary wp2 animated fadeInUp">Download Template</a>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-8 col-md-offset-2 hero-intro-text wp3 animated fadeInUp">
-                                        <p>Available exclusively from Codrops.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <ol class="flickity-page-dots"><li class="dot is-selected"></li><li class="dot"></li><li class="dot"></li></ol>
-            <button class="flickity-prev-next-button previous" type="button" aria-label="previous" disabled=""><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path></svg></button>
-            <button class="flickity-prev-next-button next" type="button" aria-label="next"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg></button>
-        </div>
-      <div class="mouse-container">
-			<a href="#intro">
-				<div class="mouse">
-					<span class="scroll-down"></span>
-				</div>
-			</a>
-		</div>
-    </header>
     @RenderBody()
     <footer class="has-padding footer-bg">
         <div class="container">
