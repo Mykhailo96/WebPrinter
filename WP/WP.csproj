@@ -216,6 +216,7 @@
     <Content Include="Content\css\normalize.min.css" />
     <Content Include="Content\css\print.css" />
     <Content Include="Content\css\screen.css" />
+    <Content Include="Content\css\styles.css" />
     <Content Include="Content\img\article-01.jpg" />
     <Content Include="Content\img\article-02.jpg" />
     <Content Include="Content\img\article-03.jpg" />
