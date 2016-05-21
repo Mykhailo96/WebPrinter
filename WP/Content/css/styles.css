@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,300,300italic,400italic,500,500italic,600,600italic,700,700italic);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 /* Imports*/
-/* line 5, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../Ruby/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,45 +25,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../Ruby/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../Ruby/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../Ruby/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../Ruby/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../Ruby/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../Ruby/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../Ruby/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../Ruby/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -164,21 +164,22 @@ Button styles
   padding: 15px 20px;
   text-decoration: none;
   line-height: 1;
+  background-color: white;
 }
-/* line 31, ../scss/partials/_buttons.scss */
+/* line 32, ../scss/partials/_buttons.scss */
 .btn.secondary:hover {
   color: #ffffff;
   background-color: #71D5D2;
   border-color: #71D5D2;
 }
-/* line 36, ../scss/partials/_buttons.scss */
+/* line 37, ../scss/partials/_buttons.scss */
 .btn.secondary:focus {
   color: #ffffff;
   background-color: #7AE2DE;
   border-color: #7AE2DE;
 }
 
-/* line 42, ../scss/partials/_buttons.scss */
+/* line 43, ../scss/partials/_buttons.scss */
 .btn.secondary-white {
   display: inline-block;
   font-size: 13px;
@@ -191,25 +192,25 @@ Button styles
   text-decoration: none;
   line-height: 1;
 }
-/* line 53, ../scss/partials/_buttons.scss */
+/* line 54, ../scss/partials/_buttons.scss */
 .btn.secondary-white:hover {
   color: #7AE2DE;
   background-color: #ffffff;
   border-color: #ffffff;
 }
-/* line 58, ../scss/partials/_buttons.scss */
+/* line 59, ../scss/partials/_buttons.scss */
 .btn.secondary-white:focus {
   color: #7AE2DE;
   background-color: #ffffff;
   border-color: #ffffff;
 }
 
-/* line 64, ../scss/partials/_buttons.scss */
+/* line 65, ../scss/partials/_buttons.scss */
 .view-more {
   margin-top: 70px;
 }
 
-/* line 67, ../scss/partials/_buttons.scss */
+/* line 68, ../scss/partials/_buttons.scss */
 a.text-link {
   color: #ffffff;
   margin-left: 30px;
@@ -218,11 +219,11 @@ a.text-link {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-/* line 74, ../scss/partials/_buttons.scss */
+/* line 75, ../scss/partials/_buttons.scss */
 a.text-link:focus {
   color: #ffffff;
 }
-/* line 77, ../scss/partials/_buttons.scss */
+/* line 78, ../scss/partials/_buttons.scss */
 a.text-link:after {
   font-family: FontAwesome;
   content: "\f105";
@@ -233,11 +234,11 @@ a.text-link:after {
   -o-transition: all 300ms;
   transition: all 300ms;
 }
-/* line 87, ../scss/partials/_buttons.scss */
+/* line 88, ../scss/partials/_buttons.scss */
 a.text-link:hover {
   color: #ffffff;
 }
-/* line 89, ../scss/partials/_buttons.scss */
+/* line 90, ../scss/partials/_buttons.scss */
 a.text-link:hover:after {
   opacity: 1;
   margin-left: 10px;
@@ -4668,4 +4669,8 @@ Responsive Media Queries
   .latest-articles select#inputArticle-Sort {
     margin: 20px 0;
   }
+}
+/* line 2626, ../scss/styles.scss */
+.lenght-input {
+  width: 300px;
 }
