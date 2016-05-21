@@ -54,15 +54,17 @@ namespace WP
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseVkontakteAuthentication("5473305", "I13FsXXJEXlpDkx89GGS", "email");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseFacebookAuthentication(
+               appId: "548490735331516",
+               appSecret: "27e7278b2e65ed4be8709390e198835b");
+
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "481737612268-0jbv88je81ola0dpp4ocavv46fqqlbd9.apps.googleusercontent.com",
+                ClientSecret = "QDF5iY5ef4mj8F0afx3b0rG9"
+            });
         }
     }
 }
