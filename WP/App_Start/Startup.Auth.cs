@@ -54,9 +54,9 @@ namespace WP
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "548490735331516",
+               appSecret: "27e7278b2e65ed4be8709390e198835b");
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
