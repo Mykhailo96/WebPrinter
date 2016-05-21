@@ -58,11 +58,11 @@ namespace WP
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "481737612268-0jbv88je81ola0dpp4ocavv46fqqlbd9.apps.googleusercontent.com",
+                ClientSecret = "QDF5iY5ef4mj8F0afx3b0rG9"
+            });
         }
     }
 }
