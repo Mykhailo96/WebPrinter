@@ -54,6 +54,8 @@ namespace WP
             //   consumerKey: "",
             //   consumerSecret: "");
 
+            app.UseVkontakteAuthentication("5473305", "I13FsXXJEXlpDkx89GGS", "email");
+
             app.UseFacebookAuthentication(
                appId: "548490735331516",
                appSecret: "27e7278b2e65ed4be8709390e198835b");
