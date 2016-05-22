@@ -83,7 +83,7 @@ namespace WP.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Purchase purchase = db.Purchases.Find(id);
-            if(purchase.OrderStatus.ToString() != "Pending")
+            if(purchase.OrderStatus.ToString() != "Pending" && User.Identity.Name != "Admin")
             {
                 return RedirectToAction("Details", new { id = id});
             }
