@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.2.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.2.2\build\Microsoft.Net.Compilers.props')" />
@@ -214,6 +214,59 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\fonts\Stroke-Gap-Icons.svg" />
+    <Content Include="Content\img\article-01.jpg" />
+    <Content Include="Content\img\article-02.jpg" />
+    <Content Include="Content\img\article-03.jpg" />
+    <Content Include="Content\img\article-04.jpg" />
+    <Content Include="Content\img\article-05.jpg" />
+    <Content Include="Content\img\article-06.jpg" />
+    <Content Include="Content\img\crew-blaz-robar.jpg" />
+    <Content Include="Content\img\crew-dude.jpg" />
+    <Content Include="Content\img\crew-mary-lou.jpg" />
+    <Content Include="Content\img\crew-peter-finlan.jpg" />
+    <Content Include="Content\img\dd-arrow.png" />
+    <Content Include="Content\img\favicon\android-chrome-144x144.png" />
+    <Content Include="Content\img\favicon\android-chrome-192x192.png" />
+    <Content Include="Content\img\favicon\android-chrome-36x36.png" />
+    <Content Include="Content\img\favicon\android-chrome-48x48.png" />
+    <Content Include="Content\img\favicon\android-chrome-72x72.png" />
+    <Content Include="Content\img\favicon\android-chrome-96x96.png" />
+    <Content Include="Content\img\favicon\apple-touch-icon-114x114.png" />
+    <Content Include="Content\img\favicon\apple-touch-icon-120x120.png" />
+    <Content Include="Content\img\favicon\apple-touch-icon-144x144.png" />
+    <Content Include="Content\img\favicon\apple-touch-icon-152x152.png" />
+    <Content Include="Content\img\favicon\apple-touch-icon-180x180.png" />
+    <Content Include="Content\img\favicon\apple-touch-icon-57x57.png" />
+    <Content Include="Content\img\favicon\apple-touch-icon-60x60.png" />
+    <Content Include="Content\img\favicon\apple-touch-icon-72x72.png" />
+    <Content Include="Content\img\favicon\apple-touch-icon-76x76.png" />
+    <Content Include="Content\img\favicon\apple-touch-icon-precomposed.png" />
+    <Content Include="Content\img\favicon\apple-touch-icon.png" />
+    <Content Include="Content\img\favicon\browserconfig.xml" />
+    <Content Include="Content\img\favicon\favicon-16x16.png" />
+    <Content Include="Content\img\favicon\favicon-194x194.png" />
+    <Content Include="Content\img\favicon\favicon-32x32.png" />
+    <Content Include="Content\img\favicon\favicon-96x96.png" />
+    <Content Include="Content\img\favicon\favicon.ico" />
+    <Content Include="Content\img\favicon\mstile-144x144.png" />
+    <Content Include="Content\img\favicon\mstile-150x150.png" />
+    <Content Include="Content\img\favicon\mstile-310x150.png" />
+    <Content Include="Content\img\favicon\mstile-310x310.png" />
+    <Content Include="Content\img\favicon\mstile-70x70.png" />
+    <Content Include="Content\img\favicon\safari-pinned-tab.svg" />
+    <Content Include="Content\img\freebie-03.jpg" />
+    <Content Include="Content\img\freebie-04.jpg" />
+    <Content Include="Content\img\hero-bg-01.jpg" />
+    <Content Include="Content\img\hero-bg-02.jpg" />
+    <Content Include="Content\img\hero-bg-03.jpg" />
+    <Content Include="Content\img\landio-freebie.jpg" />
+    <Content Include="Content\img\sedna-freebie.jpg" />
+    <Content Include="Content\img\stats-bg.jpg" />
+    <Content Include="Content\img\synthetica-logo%402x.png" />
+    <Content Include="Content\img\synthetica-logo.png" />
+    <Content Include="Content\img\texture-shapes-bg.png" />
+    <Content Include="Content\img\video-cover.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -228,6 +281,22 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="config.rb" />
+    <Content Include="Content\fonts\.DS_Store" />
+    <Content Include="Content\fonts\Stroke-Gap-Icons.eot" />
+    <Content Include="Content\fonts\Stroke-Gap-Icons.ttf" />
+    <Content Include="Content\fonts\Stroke-Gap-Icons.woff" />
+    <Content Include="Content\img\.DS_Store" />
+    <Content Include="Content\img\favicon\manifest.json" />
+    <Content Include="Content\scss\ie.scss" />
+    <Content Include="Content\scss\partials\_buttons.scss" />
+    <Content Include="Content\scss\partials\_colors.scss" />
+    <Content Include="Content\scss\partials\_layout.scss" />
+    <Content Include="Content\scss\partials\_typography.scss" />
+    <Content Include="Content\scss\partials\_video_skin.scss" />
+    <Content Include="Content\scss\print.scss" />
+    <Content Include="Content\scss\screen.scss" />
+    <Content Include="Content\scss\styles.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-2.2.3.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.3.js" />
@@ -244,20 +313,6 @@
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
@@ -269,18 +324,40 @@
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\SendCode.cshtml" />
     <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Manage\ChangePassword.cshtml" />
     <Content Include="Views\Manage\Index.cshtml" />
     <Content Include="Views\Manage\ManageLogins.cshtml" />
     <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Purchases\Create.cshtml" />
     <Content Include="Views\Purchases\Delete.cshtml" />
     <Content Include="Views\Purchases\Details.cshtml" />
     <Content Include="Views\Purchases\Edit.cshtml" />
     <Content Include="Views\Purchases\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
     <Content Include="Scripts\jquery-2.2.3.min.map" />
+    <Content Include="Views\Home\Articles.cshtml" />
+    <Content Include="Views\Home\Crew.cshtml" />
+    <Content Include="Views\Home\Freebies.cshtml" />
+    <Content Include="Views\Home\GetStarted.cshtml" />
+    <Content Include="Views\Home\Info.cshtml" />
+    <Content Include="Views\Home\Slider.cshtml" />
+    <Content Include="Views\Home\Stats.cshtml" />
+    <Content Include="Views\Shared\_LayoutOld.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
