@@ -83,6 +83,10 @@ namespace WP.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Purchase purchase = db.Purchases.Find(id);
+            if(purchase.OrderStatus.ToString() != "Pending")
+            {
+                return RedirectToAction("Details", new { id = id});
+            }
             if (purchase == null)
             {
                 return HttpNotFound();
