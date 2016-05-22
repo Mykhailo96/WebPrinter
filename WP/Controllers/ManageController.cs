@@ -227,7 +227,8 @@ namespace WP.Controllers
             {
                 UserName = user.UserName,
                 FirstName = user.FirstName,
-                LastName = user.LastName
+                LastName = user.LastName,
+                Address = user.Address
             };
 
             return View(model);
@@ -243,6 +244,7 @@ namespace WP.Controllers
             user.UserName = model.UserName;
             user.FirstName = model.FirstName;
             user.LastName = model.LastName;
+            user.Address = model.Address;
 
             var result = await UserManager.UpdateAsync(user);
             if(result.Succeeded)

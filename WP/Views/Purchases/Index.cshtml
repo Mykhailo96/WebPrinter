@@ -11,66 +11,26 @@
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ApplicationUser.FirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ObjectPrecision)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ObjecttColor)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ObjectMaterial)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OrderStatus)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OrderNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Address)
-        </th>
+
         <th>
             @Html.DisplayNameFor(model => model.FileName)
         </th>
-        <th></th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.OrderStatus)
+        </th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.ApplicationUser.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ObjectPrecision)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ObjecttColor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ObjectMaterial)
+            @Html.DisplayFor(modelItem => item.FileName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.OrderStatus)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.OrderNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Address)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FileName)
-        </td>
-        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID });
             @Html.ActionLink("Details", "Details", new { id=item.ID })
         </td>
     </tr>
