@@ -30,8 +30,13 @@
             @Html.DisplayFor(modelItem => item.OrderStatus)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID });
-            @Html.ActionLink("Details", "Details", new { id=item.ID })
+            @Html.ActionLink("Details", "Details", new { id = item.ID })
+            @{ if (item.OrderStatus.ToString() == "Pending" || User.Identity.Name == "Admin")
+                {
+
+                     @Html.ActionLink("Edit", "Edit", new { id = item.ID });
+                }
+            }
         </td>
     </tr>
 }
