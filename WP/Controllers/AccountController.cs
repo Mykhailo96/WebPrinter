@@ -152,7 +152,7 @@ namespace WP.Controllers
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = model.UserName, FirstName = model.FirstName, LastName = model.LastName,
-                                                Email = model.Email};
+                                                Email = model.Email, Address = model.Address};
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -363,7 +363,8 @@ namespace WP.Controllers
                     return View("ExternalLoginFailure");
                 }
                 var user = new ApplicationUser { UserName = model.UserName, Email = model.Email,
-                                                FirstName = model.FirstName, LastName = model.LastName };
+                                                FirstName = model.FirstName, LastName = model.LastName,
+                                                Address = model.Address};
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
                 {

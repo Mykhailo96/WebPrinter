@@ -21,6 +21,10 @@ namespace WP.Models
         [Display(Name = "Last name")]
         public string LastName { get; set; }
 
+        [Required]
+        [Display(Name = "Address")]
+        public string Address { get; set; }
+
     }
 
     public class ExternalLoginListViewModel
@@ -87,6 +91,10 @@ namespace WP.Models
         [Required]
         [Display(Name = "Last name")]
         public string LastName { get; set; }
+
+        [Required]
+        [Display(Name = "Address")]
+        public string Address { get; set; }
 
         [Required]
         [EmailAddress]
