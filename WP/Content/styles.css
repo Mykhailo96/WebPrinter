@@ -2681,7 +2681,7 @@ Stats
 ========================================================================== */
 /* line 691, scss/styles.scss */
 .stats {
-  background: url("img/stats-bg.jpg") no-repeat center center;
+  background: url("img/images-4.jpg") no-repeat center center;
   background-size: cover;
 }
 /* line 695, scss/styles.scss */
@@ -4690,4 +4690,14 @@ Responsive Media Queries
 /* line 2626, scss/styles.scss */
 .lenght-input {
   width: 300px;
+}
+
+/* line 2629, scss/styles.scss */
+.has-padding-info {
+  padding-top: 120px;
+}
+
+/* line 2633, scss/styles.scss */
+.margin-right-header-login-form {
+  margin-right: 30px;
 }

@@ -690,7 +690,7 @@ Stats
 ========================================================================== */
 .stats
 {
-    background: url('img/stats-bg.jpg') no-repeat center center;
+    background: url('img/images-4.jpg') no-repeat center center;
     background-size: cover;
     i.icon
     {
@@ -2625,4 +2625,11 @@ Responsive Media Queries
 }
 .lenght-input {
     width: 300px;
+}
+.has-padding-info
+{
+   padding-top: 120px;
+}
+.margin-right-header-login-form {
+    margin-right: 30px;
 }
