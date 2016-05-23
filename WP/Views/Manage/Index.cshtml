@@ -11,24 +11,25 @@
         <div class="col-md-8">
             <h4>Change your account settings</h4>
             <hr />
-                <p style="margin-left: 32px">
-                    @Html.ActionLink("Edit profile", "EditProfile")
-                </p>
-                <p>
-                    External Logins:
-                    @Html.ActionLink("Manage", "ManageLogins")
-                </p>
-                <p style="margin-left: 39px">
-                    Password:
-                    @if (Model.HasPassword)
-                    {
-                        @Html.ActionLink("Change your password", "ChangePassword")
-                    }
-                    else
-                    {
-                        @Html.ActionLink("Create", "SetPassword")
-                    }
-                </p>
+            <p style="margin-left: 32px">
+                <input type="button" value="Edit profile" onclick="location.href='@Url.Action("EditProfile", "Manage")'" />
+            </p>
+            <p>
+                <input type="button" value="Manage" onclick="location.href='@Url.Action("Manage logins", "Manage")'" />
+            </p>
+            <p style="margin-left: 39px">
+                @if (Model.HasPassword)
+                {
+                    <input type="button" value="Change password" onclick="location.href='@Url.Action("ChangePassword", "Manage")'" />
+                }
+                else
+                {
+                    <input type="button" value="Create password" onclick="location.href='@Url.Action("SetPassword", "Manage")'" />
+                }
+            </p>
+            <p>
+                <input type="button" value="My purchases" onclick="location.href='@Url.Action("Index", "Purchases")'" />
+            </p>
         </div>
-     </div>
+    </div>
 </div>
