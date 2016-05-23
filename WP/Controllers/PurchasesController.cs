@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -55,8 +56,26 @@ namespace WP.Controllers
         // POST: Purchases/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ObjectPrecision,ObjecttColor,ObjectMaterial,FileName")] Purchase purchase)
+        public ActionResult Create([Bind(Include = "ObjectPrecision,ObjecttColor,ObjectMaterial")] Purchase purchase)
         {
+            var fileTypes = new string[] { ".stl", ".wrl", ".vrml", ".amf", ".sldprt", ".obj", ".x3g", ".ply", ".fbx" };
+
+            var file = Request.Files[0];
+
+            if (file.ContentLength == 0)
+            {
+                return View(purchase);
+            }
+
+            var fileName = Path.GetFileName(file.FileName);
+            if (!fileTypes.Any(fileName.ToLower().Contains))
+            {
+                return View(purchase);
+            }
+            var path = Path.Combine(Server.MapPath("~/App_Data/3DModels"), fileName);
+            file.SaveAs(path);
+
+            purchase.FileName = fileName;
             purchase.OrderStatus = Status.Pending;
             purchase.ApplicationUserID = User.Identity.GetUserId();
 
