@@ -42,7 +42,16 @@ namespace WP.Controllers
             {
                 return HttpNotFound();
             }
+
+            var dir = new DirectoryInfo(Server.MapPath("~/App_Data/3DModels/"));
+            FileInfo[] fileNames = dir.GetFiles(purchase.FileName);
+            ViewBag.fileName = fileNames;
             return View(purchase);
+        }
+
+        public FileResult Download(string name)
+        {
+            return File("~/App_Data/3DModels/" + name, System.Net.Mime.MediaTypeNames.Application.Octet, name);
         }
 
         // GET: Purchases/Create
