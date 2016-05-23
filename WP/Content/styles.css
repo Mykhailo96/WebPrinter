@@ -4696,3 +4696,8 @@ Responsive Media Queries
 .has-padding-info {
   padding-top: 120px;
 }
+
+/* line 2633, scss/styles.scss */
+.margin-right-header-login-form {
+  margin-right: 30px;
+}

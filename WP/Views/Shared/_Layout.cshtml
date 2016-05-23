@@ -35,12 +35,11 @@
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                             <li>@Html.ActionLink("Print", "Create", "Purchases")</li>
                         </ul>
-                        @Html.Partial("_LoginPartial")
                     </nav>
                     <div class="secondary-nav-wrapper">
                         <ul class="secondary-nav">
-                            <li class="subscribe"><a href="#get-started">Subscribe</a></li>
-                            <li class="search"><a href="#search" class="show-search"><i class="fa fa-search"></i></a></li>
+                            <li>@Html.Partial("_LoginPartial")</li>
+
                         </ul>
                     </div>
                 </div>
