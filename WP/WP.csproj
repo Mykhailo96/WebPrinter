@@ -365,7 +365,7 @@
     <Content Include="Views\Manage\EditProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="App_Data\3DModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
