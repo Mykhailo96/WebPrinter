@@ -12,6 +12,30 @@
     <dl class="dl-horizontal">
 
         <dt>
+            @Html.DisplayNameFor(model => model.ApplicationUser.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicationUser.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplicationUser.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicationUser.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplicationUser.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicationUser.Address)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.OrderStatus)
         </dt>
 
@@ -57,6 +81,9 @@
 
         <dd>
             @Html.DisplayFor(model => model.FileName)
+        </dd>
+        <dd>
+            @Html.ActionLink("Download", "Download", new { name = ViewBag.fileName[0].ToString()})
         </dd>
 
         <dt>

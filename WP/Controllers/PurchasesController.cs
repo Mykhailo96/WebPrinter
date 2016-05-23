@@ -42,7 +42,16 @@ namespace WP.Controllers
             {
                 return HttpNotFound();
             }
+
+            var dir = new DirectoryInfo(Server.MapPath("~/App_Data/3DModels/"));
+            FileInfo[] fileNames = dir.GetFiles(purchase.FileName);
+            ViewBag.fileName = fileNames;
             return View(purchase);
+        }
+
+        public FileResult Download(string name)
+        {
+            return File("~/App_Data/3DModels/" + name, System.Net.Mime.MediaTypeNames.Application.Octet, name);
         }
 
         // GET: Purchases/Create
@@ -101,15 +110,19 @@ namespace WP.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Purchase purchase = db.Purchases.Find(id);
+
             if(purchase.OrderStatus.ToString() != "Pending" && User.Identity.Name != "Admin")
             {
                 return RedirectToAction("Details", new { id = id});
             }
+
             if (purchase == null)
             {
                 return HttpNotFound();
             }
+
             ViewBag.ApplicationUserID = new SelectList(db.Users , "Id", "FirstName", purchase.ApplicationUserID);
             return View(purchase);
         }
@@ -123,6 +136,31 @@ namespace WP.Controllers
         {
             if (ModelState.IsValid)
             {
+                var fileTypes = new string[] { ".stl", ".wrl", ".vrml", ".amf", ".sldprt", ".obj", ".x3g", ".ply", ".fbx" };
+
+                if (Request.Files.Count != 0)
+                {
+                    var file = Request.Files[0];
+
+                    if (file.ContentLength != 0)
+                    {
+                        var fileName = Path.GetFileName(file.FileName);
+                        if (!fileTypes.Any(fileName.ToLower().Contains))
+                        {
+                            return View(purchase);
+                        }
+
+                        string fullPath = Path.Combine(Server.MapPath("~/App_Data/3DModels"), purchase.FileName);
+
+                        System.IO.File.Delete(fullPath);
+
+                        var path = Path.Combine(Server.MapPath("~/App_Data/3DModels"), fileName);
+                        file.SaveAs(path);
+
+                        purchase.FileName = fileName;
+                    }
+                }
+
                 db.Entry(purchase).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

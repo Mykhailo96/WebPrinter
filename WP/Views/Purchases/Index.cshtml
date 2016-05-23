@@ -13,7 +13,7 @@
     <tr>
 
         <th>
-            @Html.DisplayNameFor(model => model.FileName)
+            @Html.DisplayNameFor(model => model.OrderNumber)
         </th>
 
         <th>
@@ -24,7 +24,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.FileName)
+            @Html.DisplayFor(modelItem => item.OrderNumber)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.OrderStatus)
@@ -35,6 +35,7 @@
                 {
 
                      @Html.ActionLink("Edit", "Edit", new { id = item.ID });
+                     @Html.ActionLink(" Delete", "Delete", new { id = item.ID });
                 }
             }
         </td>
