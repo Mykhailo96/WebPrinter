@@ -55,7 +55,7 @@ namespace WP.Controllers
         // POST: Purchases/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ObjectPrecision,ObjecttColor,ObjectMaterial,Address,FileName")] Purchase purchase)
+        public ActionResult Create([Bind(Include = "ObjectPrecision,ObjecttColor,ObjectMaterial,FileName")] Purchase purchase)
         {
             purchase.OrderStatus = Status.Pending;
             purchase.ApplicationUserID = User.Identity.GetUserId();
@@ -75,7 +75,7 @@ namespace WP.Controllers
         }
 
         // GET: Purchases/Edit/5
-        [Authorize(Roles = "admin")]
+        [Authorize(Roles = "admin, user")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -83,6 +83,10 @@ namespace WP.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Purchase purchase = db.Purchases.Find(id);
+            if(purchase.OrderStatus.ToString() != "Pending" && User.Identity.Name != "Admin")
+            {
+                return RedirectToAction("Details", new { id = id});
+            }
             if (purchase == null)
             {
                 return HttpNotFound();
@@ -96,7 +100,7 @@ namespace WP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Price,ObjectPrecision,ObjecttColor,ObjectMaterial,OrderStatus,OrderNumber,Address,FileName,ApplicationUserID")] Purchase purchase)
+        public ActionResult Edit([Bind(Include = "ID,Price,ObjectPrecision,ObjecttColor,ObjectMaterial,OrderStatus,OrderNumber,FileName,ApplicationUserID")] Purchase purchase)
         {
             if (ModelState.IsValid)
             {

@@ -217,7 +217,48 @@ namespace WP.Controllers
             base.Dispose(disposing);
         }
 
-#region Helpers
+        // GET: /Manage/EditProfile
+        [Authorize]
+        public ActionResult EditProfile()
+        {
+            var user = UserManager.FindByName(User.Identity.Name);
+
+            var model = new EditProfileViewModel
+            {
+                UserName = user.UserName,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Address = user.Address
+            };
+
+            return View(model);
+        }
+
+        //
+        // POST: /Manage/EditProfile
+        [HttpPost]
+        public async Task<ActionResult> EditProfile(EditProfileViewModel model)
+        {
+            var user = await UserManager.FindByNameAsync(User.Identity.Name);
+
+            user.UserName = model.UserName;
+            user.FirstName = model.FirstName;
+            user.LastName = model.LastName;
+            user.Address = model.Address;
+
+            var result = await UserManager.UpdateAsync(user);
+            if(result.Succeeded)
+            {
+                await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(model);
+            }
+        }
+
+        #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 
