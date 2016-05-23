@@ -58,6 +58,8 @@ namespace WP.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ObjectPrecision,ObjecttColor,ObjectMaterial")] Purchase purchase)
         {
+            var fileTypes = new string[] { ".stl", ".wrl", ".vrml", ".amf", ".sldprt", ".obj", ".x3g", ".ply", ".fbx" };
+
             var file = Request.Files[0];
 
             if (file.ContentLength == 0)
@@ -66,6 +68,10 @@ namespace WP.Controllers
             }
 
             var fileName = Path.GetFileName(file.FileName);
+            if (!fileTypes.Any(fileName.ToLower().Contains))
+            {
+                return View(purchase);
+            }
             var path = Path.Combine(Server.MapPath("~/App_Data/3DModels"), fileName);
             file.SaveAs(path);
 

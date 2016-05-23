@@ -32,4 +32,19 @@ namespace WP.Models
         public string ApplicationUserID { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }
     }
+
+    public class ValidateFileAttribute :RequiredAttribute
+    {
+        public override bool IsValid(object value)
+        {
+            var file = value as HttpPostedFileBase;
+
+            if (file == null)
+            {
+                return false;
+            }
+
+            return true;
+        }
+    }
 }
