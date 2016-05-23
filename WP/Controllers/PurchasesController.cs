@@ -58,21 +58,18 @@ namespace WP.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ObjectPrecision,ObjecttColor,ObjectMaterial")] Purchase purchase)
         {
-            if (Request.Files.Count == 0)
+            var file = Request.Files[0];
+
+            if (file.ContentLength == 0)
             {
                 return View(purchase);
             }
 
-            var file = Request.Files[0];
+            var fileName = Path.GetFileName(file.FileName);
+            var path = Path.Combine(Server.MapPath("~/App_Data/3DModels"), fileName);
+            file.SaveAs(path);
 
-            if (file != null && file.ContentLength > 0)
-            {
-                var fileName = Path.GetFileName(file.FileName);
-                purchase.FileName = fileName;
-                var path = Path.Combine(Server.MapPath("~/App_Data/3DModels"), fileName);
-                file.SaveAs(path);
-            }
-
+            purchase.FileName = fileName;
             purchase.OrderStatus = Status.Pending;
             purchase.ApplicationUserID = User.Identity.GetUserId();
 
