@@ -33,7 +33,16 @@
                         <ul class="primary-nav">
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                            <li>@Html.ActionLink("Print", "Create", "Purchases")</li>
+                            @{ if (User.Identity.Name == "Admin")
+                               {
+                                    <li>@Html.ActionLink("Print", "Index", "Purchases")</li>
+                                }
+                                else
+                                {
+                                    <li>@Html.ActionLink("Print", "Create", "Purchases")</li>
+                                }
+                            }
+                            
                         </ul>
                     </nav>
                     <div class="secondary-nav-wrapper">
