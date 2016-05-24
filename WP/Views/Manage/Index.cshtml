@@ -11,24 +11,28 @@
         <div class="col-md-8">
             <h4>Change your account settings</h4>
             <hr />
-            <p style="margin-left: 32px">
-                <input type="button" value="Edit profile" onclick="location.href='@Url.Action("EditProfile", "Manage")'" />
+            <p>
+                <input type="button" value="Edit profile" class="btn primary" onclick="location.href='@Url.Action("EditProfile", "Manage")'" />
             </p>
             <p>
+<<<<<<< HEAD
                 <input type="button" value="Manage" onclick="location.href='@Url.Action("ManageLogins", "Manage")'" />
+=======
+                <input type="button" value="Manage" class="btn primary" onclick="location.href='@Url.Action("Manage logins", "Manage")'" />
+>>>>>>> fdbf209b42f40f181275ba0c44af38780a297d17
             </p>
-            <p style="margin-left: 39px">
+            <p>
                 @if (Model.HasPassword)
                 {
-                    <input type="button" value="Change password" onclick="location.href='@Url.Action("ChangePassword", "Manage")'" />
+                    <input type="button" value="Change password" class="btn primary" onclick="location.href='@Url.Action("ChangePassword", "Manage")'" />
                 }
                 else
                 {
-                    <input type="button" value="Create password" onclick="location.href='@Url.Action("SetPassword", "Manage")'" />
+                    <input type="button" value="Create password" class="btn primary" onclick="location.href='@Url.Action("SetPassword", "Manage")'" />
                 }
             </p>
             <p>
-                <input type="button" value="My purchases" onclick="location.href='@Url.Action("Index", "Purchases")'" />
+                <input type="button" value="My purchases" class="btn primary" onclick="location.href='@Url.Action("Index", "Purchases")'" />
             </p>
         </div>
     </div>
