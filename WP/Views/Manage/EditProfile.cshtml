@@ -14,7 +14,7 @@
                 <br />
                 <br />
                 <div class="col-md-8">
-                    <h4>Edit Profile View Model</h4>
+                    <h4>Edit Profile</h4>
                     <hr />
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                     <div class="form-group">
@@ -50,6 +50,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
+                            <input style="margin-right: 20px" type="button" value="Back" class="btn primary" onclick="location.href='@Url.Action("Index")'" />
                             <input type="submit" value="Save" class="btn primary" />
                         </div>
                     </div>
@@ -58,9 +59,6 @@
           </div>
      </div>
 }
-<div>
-    @Html.ActionLink("Back", "Index")
-</div>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
