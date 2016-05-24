@@ -170,7 +170,7 @@ namespace WP.Controllers
         }
 
         // GET: Purchases/Delete/5
-        [Authorize(Roles = "admin")]
+        [Authorize(Roles = "admin, user")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
