@@ -15,11 +15,7 @@
                 <input type="button" value="Edit profile" class="btn primary" onclick="location.href='@Url.Action("EditProfile", "Manage")'" />
             </p>
             <p>
-<<<<<<< HEAD
-                <input type="button" value="Manage" onclick="location.href='@Url.Action("ManageLogins", "Manage")'" />
-=======
-                <input type="button" value="Manage" class="btn primary" onclick="location.href='@Url.Action("Manage logins", "Manage")'" />
->>>>>>> fdbf209b42f40f181275ba0c44af38780a297d17
+                <input type="button" value="Manage logins" class="btn primary" onclick="location.href='@Url.Action("ManageLogins", "Manage")'" />
             </p>
             <p>
                 @if (Model.HasPassword)
