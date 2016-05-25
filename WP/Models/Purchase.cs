@@ -10,7 +10,7 @@ namespace WP.Models
     {
         public int ID { get; set; }
 
-        [Range(1, 100000, ErrorMessage = "Price must be bigger than 0")]
+        [Range(0, 100000, ErrorMessage = "Price must be bigger than 0")]
         public int Price { get; set; }
 
         [Display(Name = "Precision")]
