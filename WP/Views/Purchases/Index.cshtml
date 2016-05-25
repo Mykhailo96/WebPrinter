@@ -4,42 +4,47 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="container">
+    <div class="row">
+        <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
+        <table class="table">
+            <tr style="border-top: hidden">
 
-        <th>
-            @Html.DisplayNameFor(model => model.OrderNumber)
-        </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderNumber)
+                </th>
 
-        <th>
-            @Html.DisplayNameFor(model => model.OrderStatus)
-        </th>
-    </tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderStatus)
+                </th>
+            </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.OrderNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OrderStatus)
-        </td>
-        <td>
-            @Html.ActionLink("Details", "Details", new { id = item.ID })
-            @{ if (item.OrderStatus.ToString() == "Pending" || User.Identity.Name == "Admin")
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderStatus)
+                    </td>
+                    <td>
+                        @{ if (item.OrderStatus.ToString() == "Pending" || User.Identity.Name == "Admin")
                 {
 
-                     @Html.ActionLink("Edit", "Edit", new { id = item.ID });
-                     @Html.ActionLink(" Delete", "Delete", new { id = item.ID });
-                }
-            }
-        </td>
-    </tr>
-}
+                                @Html.ActionLink("Edit", "Edit", new { id = item.ID });<span>|</span>
+                                @Html.ActionLink("Delete", "Delete", new { id = item.ID });<span>|</span>
+                            }
+                        }
+                        @Html.ActionLink("Details", "Details", new { id = item.ID })
+                    </td>
+                </tr>
+                            }
 
-</table>
+        </table>
+        <p>
+            <input type="button" value="Create New" class="btn primary" onclick="location.href='@Url.Action("Create", "Purchases")'" />
+        </p>
+    </div>
+</div>

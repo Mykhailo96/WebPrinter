@@ -32,7 +32,6 @@
                     <nav>
                         <ul class="primary-nav">
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                             @{ if (User.Identity.Name == "Admin")
                                {
                                     <li>@Html.ActionLink("Print", "Index", "Purchases")</li>
@@ -42,7 +41,9 @@
                                     <li>@Html.ActionLink("Print", "Create", "Purchases")</li>
                                 }
                             }
-                            
+                            <li><a href="https://localhost:44333/#intro">How it works?</a></li>
+                            <li><a href="https://localhost:44333/#team">The Crew</a></li>
+                            <li><a href="https://localhost:44333/#articles">Gallery</a></li>
                         </ul>
                     </nav>
                     <div class="secondary-nav-wrapper">
@@ -73,10 +74,11 @@
                         <li><a href="#intro">How it works?</a></li>
                         <li><a href="#team">The Crew</a></li>
                         <li><a href="#articles">Gallery</a></li>
-                        <li><a href="#freebies">Freebies</a></li>
                     </ul>
                     <ul class="footer-secondary-nav">
-                        <li>&copy; @DateTime.Now.Year – Web Printer</li>
+                        <li>Contacts: WebPrinter@gmail.com</li>
+
+                        <li><br />&copy; @DateTime.Now.Year – Web Printer</li>
                     </ul>
                 </div>
             </div>

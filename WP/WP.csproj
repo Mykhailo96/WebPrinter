@@ -355,7 +355,6 @@
     <Content Include="Scripts\jquery-2.2.3.min.map" />
     <Content Include="Views\Home\Articles.cshtml" />
     <Content Include="Views\Home\Crew.cshtml" />
-    <Content Include="Views\Home\Freebies.cshtml" />
     <Content Include="Views\Home\GetStarted.cshtml" />
     <Content Include="Views\Home\Info.cshtml" />
     <Content Include="Views\Home\Slider.cshtml" />

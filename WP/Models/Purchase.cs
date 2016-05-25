@@ -9,6 +9,8 @@ namespace WP.Models
     public class Purchase
     {
         public int ID { get; set; }
+
+        [Range(1, 100000, ErrorMessage = "Price must be bigger than 0")]
         public int Price { get; set; }
 
         [Display(Name = "Precision")]

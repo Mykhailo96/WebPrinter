@@ -8,16 +8,11 @@
         <br />
         <br />
         <br />
-        <div class="col-md-8">
-            <h4>Change your account settings</h4>
+        <div class="col-md-8" style="margin-bottom: 10px">
+            <h4>Hello @User.Identity.Name!</h4>
             <hr />
-            <p>
                 <input type="button" value="Edit profile" class="btn primary" onclick="location.href='@Url.Action("EditProfile", "Manage")'" />
-            </p>
-            <p>
                 <input type="button" value="Manage logins" class="btn primary" onclick="location.href='@Url.Action("ManageLogins", "Manage")'" />
-            </p>
-            <p>
                 @if (Model.HasPassword)
                 {
                     <input type="button" value="Change password" class="btn primary" onclick="location.href='@Url.Action("ChangePassword", "Manage")'" />
@@ -26,10 +21,7 @@
                 {
                     <input type="button" value="Create password" class="btn primary" onclick="location.href='@Url.Action("SetPassword", "Manage")'" />
                 }
-            </p>
-            <p>
                 <input type="button" value="My purchases" class="btn primary" onclick="location.href='@Url.Action("Index", "Purchases")'" />
-            </p>
         </div>
     </div>
 </div>
